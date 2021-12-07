@@ -15,8 +15,8 @@ for idx, x in enumerate(a):
         res = idx +1     
     elif minNum == gap:
         if score < x:
+            score = x
             res = idx+1
-            break
 
 print(avg, res)
 
