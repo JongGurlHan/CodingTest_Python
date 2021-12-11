@@ -5,20 +5,19 @@ n = int(input())
 a = list(map(int, input().split()))
 
 avg = round(sum(a) / n)
-minNum = 1000000
+min = 100000
 
-for idx, x in enumerate(a):
-    gap = abs(x - avg)
-    if  gap < minNum:
-        minNum =  gap
-        score = x   
-        res = idx +1     
-    elif minNum == gap:
-        if score < x:
-            score = x
-            res = idx+1
+for i, v in enumerate(a):
+    gap = abs(avg-v)
+    if gap < min:
+        min = gap
+        score = v
+        loca = i +1
+    elif gap == min:
+        if score < v:
+            score =v
+            loca = i+1
 
-print(avg, res)
+print(avg , loca)
 
-            
 
