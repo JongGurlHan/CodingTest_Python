@@ -1,6 +1,5 @@
 import sys
-
-sys.stdin=open("input.txt", "rt")
+sys.stdin=open("H:/Study/CodingTest_Python/input.txt", "rt")
 
 n = int(input())
 n_list = list(map(int, input().split()))
@@ -11,6 +10,8 @@ def reverse(x):
     return x
 
 def isPrime(x):
+    if x == 1:
+        return False
     for i in range(2, x):
         if x % i == 0:
             return False        
